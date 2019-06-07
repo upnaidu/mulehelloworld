@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:netsuite="http://www.mulesoft.org/schema/mule/netsuite" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="sampleFlow" doc:id="48bbc439-12a4-4a5b-9a9b-6cc68654fc9e" >
+		<logger level="INFO" doc:name="Logger" doc:id="009d0219-e5fa-4b7f-b16c-660e15c0b1a7" message="Before Rest :::#[message]"/>
+		<netsuite:call-restlet-get script="" deploy="" doc:name="Call RESTlet (GET)" doc:id="25cb0554-0577-4a4f-a2d8-695af041f7be" config-ref="httpListenerConfigDefault"/>
+		<logger level="INFO" doc:name="Logger" doc:id="a6f268d3-6107-4a5e-906e-b248e2bc634f" message="Logger After Rest::::::::#[payload]"/>
+	</flow>
+</mule>
